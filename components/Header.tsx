@@ -101,13 +101,7 @@ function Header() {
 
               <DropdownMenuItem
                 className="cursor-pointer"
-                onClick={() =>
-                  router.push(
-                    `/api/auth/logout?returnTo=${encodeURIComponent(
-                      "https://pokemon-yt-app-paq2.vercel.app"
-                    )}&federated=true`
-                  )
-                }
+                onClick={() => router.push("/api/auth/logout")}
               >
                 <LogOut />
                 Logout
@@ -120,7 +114,7 @@ function Header() {
       {!user?.sub && !isLoading && (
         <div className="flex items-center gap-4">
           <Link
-            href="/api/auth/login?prompt=select_account"
+            href="/api/auth/login"
             className="py-2 px-6 text-sm flex items-center gap-2 font-bold rounded-lg
             bg-[#6c5ce7]/15 text-[#6c5ce7] hover:bg-[#6c5ce7]/30 transition-all duration-300 ease-in-out"
           >
@@ -128,7 +122,7 @@ function Header() {
             Login
           </Link>
           <Link
-            href="/api/auth/login?prompt=select_account"
+            href="/api/auth/login"
             className={`py-2 px-6 text-sm flex items-center gap-2 font-bold rounded-lg
                 bg-[#6c5ce7] text-white hover:bg-[#6c5ce7]/90 transition-all duration-300 ease-in-out
               `}
