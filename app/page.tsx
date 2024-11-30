@@ -8,7 +8,6 @@ import { arrowAngleDown } from "@/utils/Icons";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Home() {
-  const { isLoading } = useUser();
   const { pokemonListDetails, loading, loadMore } = useGlobalContext();
 
   return (
