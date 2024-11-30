@@ -101,7 +101,7 @@ function Header() {
 
               <DropdownMenuItem
                 className="cursor-pointer"
-                onClick={() => router.push("/api/auth/logout")}
+                onClick={() => router.push("/api/auth/logout?federated")}
               >
                 <LogOut />
                 Logout
