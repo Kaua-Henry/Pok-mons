@@ -101,7 +101,13 @@ function Header() {
 
               <DropdownMenuItem
                 className="cursor-pointer"
-                onClick={() => router.push("/api/auth/logout?federated")}
+                onClick={() =>
+                  router.push(
+                    `/api/auth/logout?returnTo=${encodeURIComponent(
+                      "https://pokemon-yt-app-paq2.vercel.app"
+                    )}&federated=true`
+                  )
+                }
               >
                 <LogOut />
                 Logout
