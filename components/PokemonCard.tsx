@@ -54,7 +54,7 @@ function PokemonCard({ pokemon }: PokemonCardProps) {
                 setLiked((prev: boolean) => !prev);
                 performAction(user?.sub, pokemon?.name, "like");
               } else {
-                router.push("/api/auth/login?prompt=login");
+                router.push("/api/auth/prompt=select_account");
               }
             }}
           >
@@ -73,7 +73,7 @@ function PokemonCard({ pokemon }: PokemonCardProps) {
                 setBookmarked((prev: boolean) => !prev);
                 performAction(user?.sub, pokemon?.name, "bookmark");
               } else {
-                router.push("/api/auth/login?prompt=login");
+                router.push("/api/auth/prompt=select_account");
               }
             }}
           >
