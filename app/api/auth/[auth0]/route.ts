@@ -1,7 +1,7 @@
 import { handleAuth, handleLogin } from "@auth0/nextjs-auth0";
 
-export const GET = handleAuth({
-  login: async (req, res) => {
+export default handleAuth({
+  login: async (req: any, res: any) => {
     try {
       await handleLogin(req, res, {
         authorizationParams: {
@@ -9,7 +9,7 @@ export const GET = handleAuth({
         },
       });
     } catch (error) {
-      res.status(error.status || 400).end(error.message);
+      console.error(error);
     }
   },
 });
